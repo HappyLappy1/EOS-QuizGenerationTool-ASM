@@ -15,10 +15,10 @@
 ; Uncomment/comment the following labels depending on your version.
 
 ; For US
-;.include "lib/stdlib_us.asm"
-;.definelabel ProcStartAddress, 0x022E7248
-;.definelabel ProcJumpAddress, 0x022E7AC0
-;.definelabel Pressed, 0x22A35E4 
+.include "lib/stdlib_us.asm"
+.definelabel ProcStartAddress, 0x022E7248
+.definelabel ProcJumpAddress, 0x022E7AC0
+.definelabel Pressed, 0x22A35E4 
 
 ; For EU
 ;.include "lib/stdlib_eu.asm"
