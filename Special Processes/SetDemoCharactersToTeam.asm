@@ -16,17 +16,20 @@
 .definelabel MaxSize, 0x810
 
 ; For US
-.include "lib/stdlib_us.asm"
-.definelabel ProcStartAddress, 0x022E7248
-.definelabel ProcJumpAddress, 0x022E7AC0
-.definelabel SpeciesIDToStore, 0x20AFEFC
+;.include "lib/stdlib_us.asm"
+;.definelabel ProcStartAddress, 0x022E7248
+;.definelabel ProcJumpAddress, 0x022E7AC0
+;.definelabel SpeciesIDToStore, 0x20AFEFC
+;.definelabel DemoTeams, 0x20A68C8
+;.definelabel RandomizeDemoActors, 0x2065C48
 
 ; For EU
-;.include "lib/stdlib_eu.asm"
-;.definelabel ProcStartAddress, 0x022E7B88
-;.definelabel ProcJumpAddress, 0x022E8400
-;.definelabel AssemblyPointer, 0x20B138C
-;.definelabel SpeciesIDToStore, 0x20B0818
+.include "lib/stdlib_eu.asm"
+.definelabel ProcStartAddress, 0x022E7B88
+.definelabel ProcJumpAddress, 0x022E8400
+.definelabel SpeciesIDToStore, 0x20B0818
+.definelabel DemoTeams, 0x20A7168
+.definelabel RandomizeDemoActors, 0x2065FC4
 
 ; File creation
 .create "./code_out.bin", 0x022E7248 ; For EU: 0x022E7B88
