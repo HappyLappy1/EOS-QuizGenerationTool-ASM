@@ -32,7 +32,7 @@
 ;.definelabel RandomizeDemoActors, 0x2065FC4
 
 ; File creation
-.create "./code_out.bin", 0x022E7B88 ; For EU: 
+.create "./code_out.bin",  0x022E7248; For NA: 
 	.org ProcStartAddress
 	.area MaxSize
 		; r7: Process param 0 -> species ID
