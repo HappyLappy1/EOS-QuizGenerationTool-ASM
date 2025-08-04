@@ -23,16 +23,10 @@
 .definelabel SaveScriptVariableValue, 0x0204B820
 .definelabel GetDsMacAddress, 0x204A198
 
-; For EU
-;.include "lib/stdlib_eu.asm"
-;.definelabel ProcStartAddress, 0x022E7B88
-;.definelabel ProcJumpAddress, 0x022E8400
-;.definelabel GetDsUserFirmwareSettingsVeneer, 0x02004F74
-;.definelabel SaveScriptVariableValue, 0x0204BB58
-;.definelabel GetDsMacAddress, 0x0204A4D0
 
 ; File creation
-.create "./code_out.bin", 0x022E7248 ; For EU: 0x022E7B88
+.create "./code_out.bin", 0x022E7248
+
 	.org ProcStartAddress
 	.area MaxSize
 		sub r13,r13,#0x54
