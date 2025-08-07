@@ -1,6 +1,8 @@
 .relativeinclude on
 .nds
 .arm
+.definelabel MaxSize, 0x810
+
 ; ------------------------------------------------------------------------------
 ; MoveText2TopScreen
 ; Moves the text box to the top screen!
