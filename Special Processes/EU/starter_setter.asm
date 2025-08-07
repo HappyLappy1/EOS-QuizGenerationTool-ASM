@@ -11,7 +11,6 @@
 
 ; Uncomment/comment the following labels depending on your version.
 
-.definelabel MaxSize, 0x810
 
 ; for EU
 .definelabel MaxSize, 0x810
