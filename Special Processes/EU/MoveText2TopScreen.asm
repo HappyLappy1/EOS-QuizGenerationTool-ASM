@@ -18,6 +18,8 @@
 
 
 ; For EU
+.definelabel ENUM_SCREEN_MAIN, 0
+.definelabel ENUM_SCREEN_SUB, 1
 .include "lib/stdlib_eu.asm"
 .definelabel ProcStartAddress, 0x022E7B88
 .definelabel ProcJumpAddress, 0x022E8400
