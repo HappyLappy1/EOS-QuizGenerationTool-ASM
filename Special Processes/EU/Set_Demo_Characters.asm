@@ -13,7 +13,7 @@
 .nds
 .arm
 
-
+.definelabel MaxSize, 0x810
 
 ; For EU
 .include "lib/stdlib_eu.asm"
