@@ -9,7 +9,7 @@
 .relativeinclude on
 .nds
 .arm
-
+.definelabel MaxSize, 0x810
 
 ; Uncomment/comment the following labels depending on your version.
 
