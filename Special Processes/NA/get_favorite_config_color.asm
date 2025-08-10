@@ -26,29 +26,25 @@
 
 ; File creation
 .create "./code_out.bin", 0x022E7248
-
 	.org ProcStartAddress
 	.area MaxSize
 		sub r13,r13,#0x54
 		cmp r7, #0x1;
-		bgt GetOut; if >1, Do nothing.
-		beq MacAddress;	If 1, use Mac Address
-		movlt r2, r6;
-		blt ConfigSave;
-	MacAddress:
-		mov r0,r13
-		bl GetDsMacAddress
-		ldrb r2,[r13,#0x0]
-		and r2, #0xF
-		b ConfigSave
-	Color:
+		bge MacAddress;	If >=1, use Mac Address
 		mov r0,r13
 		bl GetDsUserFirmwareSettingsVeneer
 		ldrb r2,[r13,#0x1]
+		b ConfigSave
+	MacAddress:
+		mov r0,r13
+		bl GetDsMacAddress
+		ldrb r2,[r13,#5]
+		and r2, #0xF
 	ConfigSave:
 		mov r0,#0
 		mov r1,#0x45
 		bl SaveScriptVariableValue
+		ldr r0, [r13, #2]
 	GetOut:
 		add r13,r13,#0x54
 		b ProcJumpAddress
